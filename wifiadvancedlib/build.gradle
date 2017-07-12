@@ -1,0 +1,42 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+publish {
+    groupId = 'com.preethzcodez'
+    artifactId = 'wifiadvancedlib'
+    publishVersion = '1.0'
+    desc = 'This library can be used to set advanced settings for wifi such as manual proxy and static ip configurations through your app. This code works in Android 5.0, it also works in 6.0 but you cannot update a network that you have not created yourself.'
+    licences = ['Apache-2.0']
+    uploadName='WifiAdvanced'
+    website = 'https://github.com/preethzcodez/WifiAdvanced.git'
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    testCompile 'junit:junit:4.12'
+}
