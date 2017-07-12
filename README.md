@@ -6,7 +6,7 @@ Gradle: <br/>
 ```
 repositories {
     maven {
-        url  "http://dl.bintray.com/<username>/maven" 
+        url  "http://dl.bintray.com/preethzcodez/maven" 
     }
 }
 
