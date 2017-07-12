@@ -4,6 +4,12 @@ This library can be used to set advanced settings for wifi such as manual proxy 
 ## Add Dependency
 Gradle: <br/>
 ```
+repositories {
+    maven {
+        url  "http://dl.bintray.com/<username>/maven" 
+    }
+}
+
 dependencies {
   compile 'com.preethzcodez:wifiadvancedlib:1.0'
 }
